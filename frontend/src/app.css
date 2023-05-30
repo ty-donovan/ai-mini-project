@@ -1,0 +1,27 @@
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: 20vh;
+}
+
+input {
+  width: 50%;
+  height: 5vh;
+  margin: 1vh;
+  white-space: pre-wrap; /* to preserve whitespace */
+  word-wrap: break-word; /* to break long words */
+}
+
+button {
+  width: 10%;
+  height: 5vh;
+  margin: 1vh;
+}

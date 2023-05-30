@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+require("dotenv").config();
 const axios = require('axios');
 
 router.post('/openai', async (req, res) => {
@@ -10,12 +10,12 @@ router.post('/openai', async (req, res) => {
     const response = await axios.post('https://api.openai.com/v1/completions', {
       model: 'text-davinci-003',
       prompt: prompt,
-      max_tokens: 15,
+      max_tokens: 16,
       temperature: 0
     }, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
+        'Authorization': `Bearer ${process.env.openai_api_key}`
       }
     });
 
